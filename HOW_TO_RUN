@@ -1,0 +1,29 @@
+The current version works with Python 2.7 32-bit and needs pygame library.
+
+***
+Install pygame:
+$ pip install pygame
+For Windows, install newest pygame installer from www.pygame.org.
+
+***
+Run game:
+	# If 32-bit OS, simply
+	$ python battleship_gui.py
+	# If 64-bit OS, please run it with 32-bit Python binary as pygame runtime does not have a 64-bit version available.
+	# For example in Mac OS X:
+	$ python2.7-32 battleship_gui.py
+
+***
+How to play:
+Press any key to skip introduction animation (disabled in current version). Click on left map to drop ships (SPACE to change direction). When all 5 ships are dropped, click squares on right map to attack an enemy coordinate.
+
+***
+Run tests:
+ai-tester.py can be used to evaluate the performance of AI.
+$ python ai-tester <AI1_filename> <AI2_filename> <rounds>
+Summarized test results will be generated after all tests end.
+
+To test the difference between memorized and non-memorized AI, use ai-tester-mem.py:
+$ python ai-tester-mem <AI1_filename> <AI2_filename> <rounds>
+
+GUI can also be used to test the AI. We did not have enough time to modify GUI to take different AIs as input, but some minor changes in GUI’s code will do.
